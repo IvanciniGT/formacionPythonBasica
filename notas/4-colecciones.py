@@ -52,5 +52,78 @@ print( "rojo" in colores )  # Devuelve True si el elemento está en la tupla, Fa
 print( "morado" in colores )  # Devuelve True si el elemento está en la tupla, False si no está
 # Estas son nuestras tuplas.
 
-# Hay otros 2 tipos de datos de colección: Listas y Diccionarios... pero mañana los vemos.
+# Hay otros 2 tipos de datos de colección: Listas y Diccionarios
 
+# Lista: Es igual que una tupla, pero sus valores son editables. Y de hecho, puedo incluso eliminarlos o añadir nuevos valores.
+
+mi_lista = [25, 30, 35, 40]  # Lista de números enteros
+# Les puedo aplicar lo mismo que a las tuplas:
+print(mi_lista)
+print(mi_lista[2])  # Acceder al tercer elemento (índice 2)
+print(len(mi_lista))  # Devuelve 4
+print(mi_lista[1:3])  # Extraer elementos desde el índice 1 hasta el 3 (no incluido)
+print(mi_lista[-1])  # Acceder al último elemento
+print(20 in mi_lista)  # Devuelve False
+# Iterarlo / Recorrerlo
+for numero in mi_lista:
+    print(numero)
+
+# Lo mismo que a las tuplas... pero además puedo:
+mi_lista[1] = 32  # Modificar el segundo elemento (índice 1) [25, 32, 35, 40]
+# Borrar un elemento:
+del mi_lista[2]  # Elimina el tercer elemento (índice 2)
+print(mi_lista)  # Ahora es [25, 32, 40]
+# Añadir un elemento al final:
+mi_lista.append(45)  # Añade 45 al final de la lista
+print(mi_lista)  # Ahora es [25, 32, 40, 45]
+# Insertar un elemento en una posición concreta:    
+mi_lista.insert(1, 28)  # Inserta 28 en la posición 1
+print(mi_lista)  # Ahora es [25, 28, 32, 40, 45]
+# Eliminar un elemento por su valor:
+
+
+# Diccionarios. Los usamos un montón.
+# Un diccionario es como una lista... es decir, me permite agrupar muchos valores, y además editarlos (modificarlos)
+# La diferencia es que, en las listas, para recuperar un elemento (o editarlo) su posición (índice).
+lista = [ "valor1", "valor2", "valor3" ]
+print(lista[0])
+print(lista[-1])
+# En los diccionarios, los elementos se recuperan (o se editan) por una clave que cada dato/valor tiene asociada.
+
+menchu_lista = [ "menchu", 29, "Ingeniera" ] 
+# Si quiero cambiar la edad de menchu a 50 años, que tengo que hacer?
+menchu_lista[1] = 50
+# Quiero poner a Menchu ahora que se llama Felipe.. que estas cosas pasan hoy en día:
+menchu_lista[0] = "Felipe"
+# Y si quiero recuperar la profesión de menchu
+profesion = menchu_lista[-1]
+profesion = menchu_lista[2]
+
+# Qué tal es trabajar con esos numeritos? 0.. 1.. 2.. es cómodo?
+# En lugar de usar una lista para guardar los datos de Menchu, podríamos haber usado un diccionario.
+# Al hacerlo, cada dato que guardase en ese diccionario, tendría un identificador / clave que me permitiría recuperarlo o modificarlo fácilmente.
+menchu_diccionario = { "nombre": "menchu", "edad": 29, "profesion": "Ingeniera" }
+# Si lo pensáis.. una lista es un diccionario , en el que las claves son números secuenciales comenzando en 0.
+menchu_diccionario_simulando_lista = { 0: "menchu", 1: 29, 2: "Ingeniera" }  # Esto es una lista disfrazada de diccionario
+
+# Para sacar el nombre:
+menchu_lista[0]
+menchu_diccionario_simulando_lista[0]
+menchu_diccionario["nombre"]
+
+# Para editar el nombre
+menchu_lista[0]                         = "Felipe"
+menchu_diccionario_simulando_lista[0]   = "Felipe"
+menchu_diccionario["nombre"]            = "Felipe"
+
+# Ojo con los diccionario. A la hora de recorrerlos (hacerles un bucle). Se puede? SI
+# Mientras que cuando hacíamos un for en una lista, el bucle nos daba directamente los valores...
+for valor in menchu_lista:
+    print(valor)
+# Cuando hacemos un for en un diccionario, el bucle nos da las claves.
+for clave in menchu_diccionario:
+    print(clave, menchu_diccionario[clave])
+# Aunque... tachann!!! Hay otra opción adicional.
+# Pedir en el bucle, tanto la clave como el valor asociado a esa clave:
+for clave, valor in menchu_diccionario.items():
+    print(clave, valor)

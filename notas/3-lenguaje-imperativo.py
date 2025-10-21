@@ -85,3 +85,47 @@ while(inicio_cuenta_atras > 0):
 
 print("Explosión")
 print("Cataplan!!!!!")
+
+# Segundo tipo de bucle que tiene python: FOR
+# Este bucle me permite recorrer los elementos de una colección (ver fichero 4-colecciones.py)
+# Por ahora, hemos visto ya un tipo de colección que tiene python: TUPLAS
+
+tupla = (1, 2, 3, 4, 5)
+for numero in tupla: # Para cada elemento de la tupla, haz lo siguiente:
+    # Quiero hacer algo
+    print(numero)
+
+# Existe en python un bucle que me permita hacer un trabajo 100 veces? NO, en otro lenguajes si.. En python NO.
+# Solo hay esos 2 tipos de bucles: WHILE y FOR.
+# Si quiero ejecutar algo 100 veces.. que se os ocurre?
+contador = 1
+while (contador <= 100):
+    print("Esta es la repetición número " + str(contador))
+    contador += 1
+
+# Esta es una forma...
+# Otra? sería con un for... Pero el for hace un recorrido por una colección....
+# Si quiero que se ejecute 100 veces.. necesito una tupla con 100 elementos.
+tupla_larga = (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,
+                31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,
+                51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,
+                71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,
+                91,92,93,94,95,96,97,98,99,100)
+for numero in tupla_larga:
+    print("Esta es la repetición número " + str(numero))    
+# Con un bucle for no hay forma de hacer eso sin crear la tupla de 100 elementos.
+# Lo que si podemos es ayudarnos de otra de esas built-in functions (funciones integradas) que tiene python,
+# Que nos ayuda a crear esa tupla de 100 elementos en automático: range()
+for numero in range(1, 10): # range(inicio, fin_exclusivo)
+    print("Esta es la repetición número " + str(numero))
+# La función range.. está creando una tupla de números del 1 al 100 (100 no incluido) y el for la recorre.
+
+for numero in range(1, 10,2): # range(inicio, fin_exclusivo, paso)
+    print("Esta es la repetición número " + str(numero))
+
+for numero in range(20, 1,-5): # range(inicio, fin_exclusivo, paso)
+    print("Esta es la repetición número " + str(numero))
+
+colores = ("rojo", "verde", "azul", "amarillo")
+for color in colores:
+    print("El color es: " + color)

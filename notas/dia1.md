@@ -102,3 +102,27 @@ PANDAS
 NUMPY
 SEABORN
 MATPLOTLIB
+
+
+
+---
+
+```py
+# Texto de ejemplo
+texto = "Hola, ¿qué tal?"
+print(texto[0])  # Puedo acceder al primer carácter usando el índice 0
+```
+
+```mermaid
+graph TD
+    A[Texto de ejemplo] --> B[Puedo acceder al primer carácter usando el índice 0]
+```
+
+```mermaid
+pie
+    title Distribución de edades
+    "0-18" : 10
+    "19-35" : 30
+    "36-60" : 25
+    "61+" : 15
+```
