@@ -1,4 +1,7 @@
-from juego import bienvenida, jugar_piedra_papel_tijera  # Quiero que esa función que tengo en el otro fichero esté disponible en este
+from juego import jugar_piedra_papel_tijera  # Quiero que esa función que tengo en el otro fichero esté disponible en este
+# import juego # Esto importa todas las funciones... pero... hay una diferencia!
+# A la hora de usar las funciones hay que poner el prefijo "juego."
+# Por ejemplo: juego.jugar_piedra_papel_tijera()
 # Tenemos ya el juego de piedra, papel o tijera en la carpeta ejercicios.
 # Vamos a modificarlo... para que:
 # - Lo primero que haga es preguntar mi nombre de usuario
@@ -146,7 +149,7 @@ def preguntar_si_otro_usuario_quiere_jugar():
 def existe_el_jugador(nombre_jugador):
     return buscar_jugador(nombre_jugador) != None
 
-def bienvenido():
+def bienvenida():
     print("¡Bienvenido al torneo de Piedra, Papel o Tijera!")
 
 def despedida():
