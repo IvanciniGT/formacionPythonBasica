@@ -104,14 +104,15 @@ def jugar_piedra_papel_tijera():
     tabla_resultados = [0,0,0] # En la primera casilla, guardo las manos ganadas por el jugador
                                # En la segunda casilla, guardo las manos ganadas por la computadora
                                # En la tercera casilla, guardo los empates
-    bienvenida()
+    #bienvenida()
     while not hay_ganador_final(tabla_resultados):
         ganador = jugar_una_mano()
         actualizar_marcador(ganador, tabla_resultados)
     mostrar_ganador_final(tabla_resultados)
-    despedida()
+    #despedida()
+    return ganador
 
-jugar_piedra_papel_tijera()
+#jugar_piedra_papel_tijera()
 
 
 
